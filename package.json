@@ -1,0 +1,15 @@
+{
+  "name": "debugger",
+  "version": "1.0.0",
+  "description": "From my talk on the node debugger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "github.com/JoeScho/example.debugger",
+  "author": "JoeScho",
+  "license": "ISC",
+  "dependencies": {
+    "needle": "^2.2.4"
+  }
+}
