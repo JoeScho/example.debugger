@@ -1,6 +1,11 @@
-const Jon = 'Snow'
-const and = 'Khaleesi'
-const areIn = '❤️'
+const whiteWalker = true
+let runAway = false;
+
+if (whiteWalker) {
+  runAway = true;
+}
+
+debugger
 
 const fight = () => ({
   targaryen: Math.floor(Math.random() * 100),
