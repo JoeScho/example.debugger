@@ -1,18 +1,16 @@
-const whiteWalker = true
-let runAway = false;
-
-if (whiteWalker) {
-  runAway = true;
-}
-
 debugger
 
-const fight = () => ({
-  targaryen: Math.floor(Math.random() * 100),
-  stark: Math.floor(Math.random() * 100),
-  whiteWalker: Math.floor(Math.random() * 100),
-  lannister: Math.floor(Math.random() * 100)
-});
+const targaryen = Math.floor(Math.random() * 100);
+const stark = Math.floor(Math.random() * 100);
+const whiteWalker = Math.floor(Math.random() * 100);
+const lannister = Math.floor(Math.random() * 100);
+
+const houses = {
+  targaryen,
+  stark,
+  whiteWalker,
+  lannister
+};
 
 const whoGetsTheThrone = houses => {
   const fightValues = Object.values(houses);
@@ -21,4 +19,4 @@ const whoGetsTheThrone = houses => {
   return Object.keys(houses).find(x => houses[x] === winnerValue);
 };
 
-console.log(whoGetsTheThrone(fight()));
+console.log(whoGetsTheThrone(houses));
