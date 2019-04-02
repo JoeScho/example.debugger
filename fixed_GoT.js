@@ -7,7 +7,7 @@ const createHouse = (name, armySize, soldierAbility, noOfDragons) => ({
 
 const houses = [
   createHouse('Targaryen', 100000, 0.99, 2),
-  createHouse('Stark', 20000, 0.9, 0),
+  createHouse('Stark', 20000, 0.91, 0),
   createHouse('White Walkers', 198000, 0.5, 1),
   createHouse('Lannister', 24000, 0.75, 0)
 ];
@@ -20,8 +20,8 @@ const battle = (house1, house2) => {
   let h1ChanceOfWinning = house1.armySize * house1.soldierAbility;
   let h2ChanceOfWinning = house2.armySize * house2.soldierAbility;
 
-  h1ChanceOfWinning = h1ChanceOfWinning / house2.noOfDragons;
-  h2ChanceOfWinning = h2ChanceOfWinning / house1.noOfDragons;
+  h1ChanceOfWinning = h1ChanceOfWinning * (1 - (0.1 * house2.noOfDragons));
+  h2ChanceOfWinning = h2ChanceOfWinning * (1 - (0.1 * house1.noOfDragons));
 
   if (h1ChanceOfWinning > h2ChanceOfWinning) console.log(`The winner is ${house1.name}`);
   else if (h2ChanceOfWinning > h1ChanceOfWinning) console.log(`The winner is ${house2.name}`);
